@@ -1,5 +1,7 @@
 import Home from "./components/Home";
 import Products from "./components/Products";
+import Shop from "./components/Shop";
+import Cart from "./components/Cart";
 
 export default {
     mode: "history",
@@ -12,6 +14,14 @@ export default {
         {
             path: "/products",
             component: Products
-        }
+        },
+        {
+            path: "/shop",
+            component: Shop
+        },
+      {
+        path: "/cart",
+        component: Cart
+      }
     ]
 };
