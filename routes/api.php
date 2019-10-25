@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('landingpage', 'LandingPageController@index')->name('landingpage.index');
+Route::get('shop', 'ShopController@index')->name('shop.index');
+Route::get('shop/{slug}', 'ShopController@show')->name('shop.show');
+Route::get('cart', 'CartController@index')->name('cart.index');

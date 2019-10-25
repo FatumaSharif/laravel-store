@@ -1,7 +1,7 @@
-import Home from "./components/Home";
-import Products from "./components/Products";
-import Shop from "./components/Shop";
-import Cart from "./components/Cart";
+import Home from "./views/Home";
+import Catalog from "./views/Catalog";
+import Shop from "./views/Shop";
+import Cart from "./views/Cart";
 
 export default {
     mode: "history",
@@ -12,16 +12,20 @@ export default {
             component: Home
         },
         {
-            path: "/products",
-            component: Products
+            path: "/catalog",
+            component: Catalog
         },
         {
             path: "/shop",
             component: Shop
         },
-      {
-        path: "/cart",
-        component: Cart
-      }
+        {
+          path: "/shop/:id",
+          component: Shop
+        },
+        {
+          path: "/cart",
+          component: Cart
+        }
     ]
 };

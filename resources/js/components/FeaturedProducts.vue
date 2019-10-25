@@ -3,9 +3,9 @@
     <div class="mid-hero">
       <div class="mid-hero-content">
         <p class="mid-hero-title">it's not hoarding if it's skincare</p>
-        <a href="" class="mid-hero-shop">
-          Shop
-        </a>
+        <router-link to="/products">
+          <a href class="mid-hero-shop">Shop</a>
+        </router-link>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "FeaturedProducts",
+  name: "FeaturedProducts"
 };
 </script>
 <style scoped>
@@ -30,10 +30,16 @@ export default {
   font-weight: 500;
   padding: 5%;
   letter-spacing: 0.06rem;
-  padding-top: 10%;
+  padding-top: 30%;
 }
 a.mid-hero-shop {
-    color: #fff;
-    border-bottom: 4px solid #fff;
+  color: #fff;
+  border-bottom: 4px solid #fff;
+}
+
+@media (min-width: 576px) {
+  .mid-hero-content {
+    padding-top: 10%;
+  }
 }
 </style>

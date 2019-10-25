@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="banner-bottom">
+    <div class="container-fluid banner-bottom">
       <div class="row">
-        <div class="col banner-bottom-right">
+        <div centered class="col banner-bottom-right">
           <h3 class="banner-title">#DewySkin</h3>
           <p
             class="banner-content"
@@ -31,10 +31,17 @@ banner-bottom-left {
   height: 300px;
   margin: 5% 1%;
   text-align: center;
-  padding-top: 7%;
+  padding-top: 15%;
   color: #eee;
   font-weight: 600;
   line-height: 28px;
   letter-spacing: 0.08rem;
+}
+
+@media (min-width: 505px) {
+  .banner-bottom-right,
+  .banner-bottom-left {
+    padding-top: 7%;
+  }
 }
 </style>

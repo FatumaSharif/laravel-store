@@ -2,7 +2,7 @@
   <div>
     <div class="container-fluid logos">
       <div class="row">
-        <div class="col">
+        <div class="col logowrap">
           <div class="logo">
             <img
               src="https://images-na.ssl-images-amazon.com/images/G/01/img15/beauty/luxury/logo/25820_beauty_logo-resize_olay_logo-tile_680x295._V310559340_.jpg"
@@ -11,7 +11,7 @@
             />
           </div>
         </div>
-        <div class="col">
+        <div class="col logowrap">
           <div class="logo">
             <img
               src="https://images-na.ssl-images-amazon.com/images/G/01/img15/beauty/luxury/logo/25820_beauty_logo-resize_aveeno_logo-tile_680x295._V310559666_.jpg"
@@ -20,7 +20,7 @@
             />
           </div>
         </div>
-        <div class="col">
+        <div class="col logowrap">
           <div class="logo">
             <img
               src="https://images-na.ssl-images-amazon.com/images/G/01/img15/beauty/luxury/logo/25820_beauty_logo-resize_bodyshop_logo-tile_680x295._V310559630_.jpg"
@@ -29,7 +29,7 @@
             />
           </div>
         </div>
-        <div class="col">
+        <div class="col logowrap">
           <div class="logo">
             <img
               src="https://images-na.ssl-images-amazon.com/images/G/01/img15/beauty/luxury/logo/25820_beauty_logo-resize_cerave_logo-tile_680x295._V310559627_.jpg"
@@ -38,7 +38,7 @@
             />
           </div>
         </div>
-        <div class="col">
+        <div class="col logowrap">
           <div class="logo">
             <img
               src="https://images-na.ssl-images-amazon.com/images/G/01/img15/beauty/luxury/logo/25820_beauty_logo-resize_loreal_logo-tile_680x295._V310559636_.jpg"
@@ -47,7 +47,7 @@
             />
           </div>
         </div>
-        <div class="col">
+        <div class="col logowrap">
           <div class="logo">
             <img
               src="https://images-na.ssl-images-amazon.com/images/G/01/img15/beauty/luxury/logo/25820_beauty_logo-resize_Neutrogena_logo-tile_680x295._V310559633_.jpg"
@@ -67,10 +67,25 @@ export default {
 </script>
 <style scoped>
 .logos {
-  margin: 3% 0;
+  margin-top: 3%;
+  margin: 7% 0;
+}
+.logowrap {
+  padding: 1%;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 .logo-img {
   width: 100px;
   height: auto;
+}
+
+@media (min-width: 719px) {
+  .logowrap {
+    border-bottom: none;
+  }
+  .logowrap:last-child {
+    border: none;
+  }
 }
 </style>

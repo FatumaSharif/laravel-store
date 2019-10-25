@@ -1,14 +1,14 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid categories">
     <h2 class="title">Categories</h2>
-    <div class="row categories">
-      <div class="col category-1">
+    <div class="row category">
+      <div class="col-sm category-1">
         <p class="title-1">perfume</p>
       </div>
-      <div class="col category-2">
+      <div class="col-sm category-2">
         <p class="title-2 mx-auto">jewellery</p>
       </div>
-      <div class="col category-3">
+      <div class="col-sm category-3">
         <p class="title-3 mx-auto">makeup</p>
       </div>
     </div>
@@ -24,14 +24,16 @@ export default {
   margin: 5% 0;
 }
 .categories {
-  height: 35vh;
-  margin: 2%;
+  /* height: 55vh; */
+  margin: 8% 0;
+  display: block;
+  overflow: hidden;
 }
 .category-1,
 .category-2,
 .category-3 {
   height: 150px;
-  padding: 1%;
+  padding-bottom: 15.2rem;
 }
 .title-1,
 .title-2,
@@ -55,5 +57,11 @@ export default {
 }
 .title-3 {
   background-image: url(https://images.pexels.com/photos/965731/pexels-photo-965731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+@media (min-width: 576px) {
+  .categories {
+    margin: 0;
+  }
 }
 </style>

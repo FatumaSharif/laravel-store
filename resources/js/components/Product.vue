@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div class="products mx-auto">
+    <div class="products">
       <div class="product-element">
-        <a href>
+        <router-link to="/shop">
           <img
-            class="rounded mx-auto d-block"
-            src="https://m.media-amazon.com/images/I/51hLVeM-0jL._SR500,500_.jpg"
+            class="product-image"
+            src="https://m.media-amazon.com/images/I/51MYxkOabGL._SR500,500_.jpg"
             alt
-            width="300"
-            height="300"
+            width="200"
+            height="200"
           />
-        </a>
+        </router-link>
       </div>
       <div class="product-details">
         <div class="product-reviews"></div>
@@ -18,7 +18,7 @@
           <a href>The Ordinary</a>
         </div>
         <div class="product-title">
-          <a href>The Ordinary Glycolic Acid 7% Toning Solution 240ml</a>
+          <router-link to="/shop">The Ordinary Glycolic Acid 7% Toning Solution 240ml</router-link>
         </div>
         <div class="price">
           <span>
@@ -36,9 +36,6 @@ export default {
 };
 </script>
 <style scoped>
-/* .products {
-  font-family: "Poppins";
-} */
 .product-title,
 .product-brand,
 .price {
@@ -47,6 +44,8 @@ export default {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.04em;
+  width: 75%;
+  margin-left: 12.5%;
 }
 .product-title a,
 .product-brand a {
@@ -61,21 +60,32 @@ export default {
 }
 .product-brand a {
   text-transform: uppercase;
-    font-weight: 400;
-    color: #777;
-    /* color: #161d25; */
-    font-size: 14px;
-    font-weight: 600;
-    font-style: italic;
-    letter-spacing: 0.56px;
-    margin: 1rem 0;
+  font-weight: 400;
+  color: #777;
+  /* color: #161d25; */
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.56px;
+  margin: 1rem 0;
 }
 .price {
   font-weight: 600;
   color: #000;
-  margin: 12px 0;
   letter-spacing: 0.8px;
+  margin-top: 10px;
   margin-bottom: 7px;
-  font-size: 15px;
+  font-size: 13px;
+}
+.product-element {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+img.mx-auto.d-block {
+    max-width: 100%;
+    max-height: 100%;
 }
 </style>
